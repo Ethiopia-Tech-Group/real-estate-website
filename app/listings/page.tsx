@@ -9,101 +9,102 @@ import { Search, MapPin, Bed, Bath, Square, Heart } from "lucide-react"
 const allListings = [
   {
     id: 1,
-    title: "Modern Downtown Loft",
-    price: 1250000,
-    location: "Downtown San Francisco",
+    title: "Modern Bole Loft",
+    price: 125000,
+    location: "Bole, Addis Ababa",
     beds: 2,
     baths: 2,
     sqft: 1400,
-    image: "/placeholder.svg?key=modern-loft&height=300&width=400",
+    image: "/hero9.jpg",
     category: "For Sale",
     featured: true,
   },
   {
     id: 2,
-    title: "Luxury Bay View Penthouse",
-    price: 3500000,
-    location: "Financial District",
+    title: "Luxury Kazanchis Penthouse",
+    price: 350000,
+    location: "Kazanchis, Addis Ababa",
     beds: 3,
     baths: 3,
     sqft: 2800,
-    image: "/placeholder.svg?key=penthouse&height=300&width=400",
+    image: "/hero8.jpg",
     category: "For Sale",
     featured: true,
   },
   {
     id: 3,
-    title: "Charming Victorian Home",
-    price: 2100000,
-    location: "Pacific Heights",
+    title: "Charming Piassa Villa",
+    price: 210000,
+    location: "Piassa, Addis Ababa",
     beds: 4,
     baths: 3,
     sqft: 3200,
-    image: "/placeholder.svg?key=victorian&height=300&width=400",
+    image: "/hero5.jpg",
     category: "For Sale",
     featured: true,
   },
   {
     id: 4,
-    title: "Spacious Marina Apartment",
+    title: "Spacious CMC Apartment",
     price: 850000,
-    location: "Marina District",
+    location: "CMC, Addis Ababa",
     beds: 2,
     baths: 2,
     sqft: 1150,
-    image: "/placeholder.svg?key=marina&height=300&width=400",
+    image: "/hero4.jpg",
     category: "For Sale",
     featured: false,
   },
   {
     id: 5,
-    title: "Trendy Tech Hub Studio",
+    title: "Trendy Sarbet Studio",
     price: 450000,
-    location: "SoMa",
+    location: "Sarbet, Addis Ababa",
     beds: 1,
     baths: 1,
     sqft: 680,
-    image: "/placeholder.svg?key=soma&height=300&width=400",
+    image: "/hero10.jpg",
     category: "For Sale",
     featured: false,
   },
   {
     id: 6,
-    title: "Cozy Garden Apartment",
-    price: 3200,
-    location: "Mission District",
+    title: "Cozy Gerji Apartment",
+    price: 35000,
+    location: "Gerji, Addis Ababa",
     beds: 1,
     baths: 1,
     sqft: 750,
-    image: "/placeholder.svg?key=mission&height=300&width=400",
+    image: "/hero2.jpg",
     category: "For Rent",
     featured: false,
   },
   {
     id: 7,
-    title: "Premium Executive Loft",
-    price: 5500000,
-    location: "SOMA",
+    title: "Premium Old Airport Loft",
+    price: 550000,
+    location: "Old Airport, Addis Ababa",
     beds: 3,
     baths: 2,
     sqft: 2200,
-    image: "/placeholder.svg?key=executive&height=300&width=400",
+    image: "/hero7.jpg",
     category: "Premium",
     featured: true,
   },
   {
     id: 8,
-    title: "Beachfront House",
-    price: 4200000,
-    location: "Ocean Beach",
+    title: "Lake View Villa",
+    price: 42000,
+    location: "Bishoftu (Debre Zeyit)",
     beds: 4,
     baths: 3,
     sqft: 3500,
-    image: "/placeholder.svg?key=beach&height=300&width=400",
+    image: "/hero6.jpg",
     category: "For Sale",
     featured: false,
   },
-]
+];
+
 
 export default function ListingsPage() {
   const [searchTerm, setSearchTerm] = useState("")
@@ -208,8 +209,8 @@ export default function ListingsPage() {
                       className="w-full"
                     />
                     <div className="flex justify-between text-sm text-muted-foreground">
-                      <span>${(priceRange[0] / 1000000).toFixed(1)}M</span>
-                      <span>${(priceRange[1] / 1000000).toFixed(1)}M</span>
+                      <span>{(priceRange[0] / 1000000).toFixed(1)}M ETB</span>
+                      <span>{(priceRange[1] / 1000000).toFixed(1)}M ETB</span>
                     </div>
                   </div>
                 </div>
@@ -228,7 +229,7 @@ export default function ListingsPage() {
                 </p>
                 <div className="flex items-center gap-2">
                   <span className="text-sm text-muted-foreground">Sort by</span>
-                  <select className="px-3 py-2 border border-border rounded-lg bg-white text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
+                  <select className="px-2 py-2 border border-border rounded-lg bg-white text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
                     <option>Newest</option>
                     <option>Price: Low to High</option>
                     <option>Price: High to Low</option>
@@ -286,8 +287,8 @@ export default function ListingsPage() {
                       <div className="flex justify-between items-center">
                         <span className="text-lg sm:text-2xl font-bold text-primary">
                           {listing.category === "For Rent"
-                            ? `$${listing.price.toLocaleString()}/mo`
-                            : `$${(listing.price / 1000000).toFixed(1)}M`}
+                            ? `${listing.price.toLocaleString()}ETB /mo`
+                            : `${(listing.price / 1000000).toFixed(1)}M ETB`}
                         </span>
                       </div>
                     </div>

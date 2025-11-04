@@ -5,6 +5,7 @@ import { Footer } from "@/components/footer"
 import { useState } from "react"
 import { ChevronLeft, ChevronRight, MapPin, Phone, Mail, Bed, Bath, Square, Heart, Share2 } from "lucide-react"
 import Link from "next/link"
+import { useParams } from "next/navigation"
 
 interface Room {
   name: string
@@ -38,9 +39,9 @@ interface Property {
 const propertyData: Record<number, Property> = {
   1: {
     id: 1,
-    title: "Modern Downtown Loft",
-    price: 1250000,
-    location: "Downtown San Francisco",
+    title: "Modern Bole Loft",
+    price: 12500000,
+    location: "Bole, Addis Ababa",
     beds: 2,
     baths: 2,
     sqft: 1400,
@@ -48,33 +49,33 @@ const propertyData: Record<number, Property> = {
     category: "For Sale",
     featured: true,
     description:
-      "Experience this stunning modern loft featuring open floor plans, floor-to-ceiling windows, and smart home technology. Perfect for urban professionals.",
-    yearBuilt: 2020,
+      "Experience this stunning modern loft in the heart of Bole featuring open floor plans, floor-to-ceiling windows, and smart home technology. Perfect for young professionals or couples.",
+    yearBuilt: 2021,
     parking: 2,
     rooms: [
       {
         name: "Living Room",
-        description: "Spacious open-concept living area with floor-to-ceiling windows and modern finishes.",
+        description: "Spacious open-concept living area with panoramic city views and modern finishes.",
         image: "/modern-living-room-with-floor-to-ceiling-windows.jpg",
       },
       {
         name: "Kitchen",
-        description: "Chef's kitchen with stainless steel appliances, marble countertops, and smart storage.",
+        description: "Chef’s kitchen with stainless steel appliances, marble countertops, and ample storage space.",
         image: "/modern-stainless-steel-kitchen.png",
       },
       {
         name: "Master Bedroom",
-        description: "Luxurious master suite with walk-in closet and ensuite bathroom.",
+        description: "Luxurious master suite with balcony access and ensuite bathroom.",
         image: "/modern-master-bedroom-with-city-views.jpg",
       },
       {
         name: "Guest Bedroom",
-        description: "Comfortable guest bedroom with natural light and modern décor.",
+        description: "Comfortable guest bedroom with natural light and a quiet neighborhood view.",
         image: "/bright-guest-bedroom.jpg",
       },
       {
         name: "Master Bath",
-        description: "Spa-like master bathroom with soaking tub and rainfall shower.",
+        description: "Spa-like bathroom with soaking tub and rainfall shower.",
         image: "/luxury-modern-bathroom.jpg",
       },
       {
@@ -84,17 +85,18 @@ const propertyData: Record<number, Property> = {
       },
     ],
     agent: {
-      name: "Sarah Johnson",
-      phone: "+1 (555) 123-4567",
-      email: "sarah@smartrealty.com",
+      name: "Sara Tadesse",
+      phone: "+251 91 123 4567",
+      email: "sara@smartrealty.et",
       image: "/professional-headshot.png",
     },
   },
+
   2: {
     id: 2,
-    title: "Luxury Bay View Penthouse",
-    price: 3500000,
-    location: "Financial District",
+    title: "Luxury Kazanchis Penthouse",
+    price: 35000000,
+    location: "Kazanchis, Addis Ababa",
     beds: 3,
     baths: 3,
     sqft: 2800,
@@ -102,48 +104,49 @@ const propertyData: Record<number, Property> = {
     category: "For Sale",
     featured: true,
     description:
-      "Indulge in luxury with this exceptional penthouse offering breathtaking bay views, premium finishes, and an outdoor terrace.",
-    yearBuilt: 2022,
+      "Indulge in luxury with this exceptional penthouse offering breathtaking city views, premium finishes, and a spacious outdoor terrace in the vibrant Kazanchis district.",
+    yearBuilt: 2023,
     parking: 3,
     rooms: [
       {
         name: "Living Room",
-        description: "Grand living room with floor-to-ceiling windows overlooking the bay.",
+        description: "Grand living room with floor-to-ceiling windows overlooking the Addis skyline.",
         image: "/luxury-penthouse-living-room-with-bay-views.jpg",
       },
       {
         name: "Dining Room",
-        description: "Sophisticated dining area perfect for entertaining guests.",
+        description: "Sophisticated dining area ideal for entertaining guests or hosting family dinners.",
         image: "/elegant-dining-room.png",
       },
       {
         name: "Chef Kitchen",
-        description: "State-of-the-art kitchen with premium appliances and custom cabinetry.",
+        description: "State-of-the-art kitchen with imported appliances and sleek cabinetry.",
         image: "/luxury-chef-kitchen.jpg",
       },
       {
         name: "Master Suite",
-        description: "Lavish master suite with panoramic views and spa bathroom.",
+        description: "Lavish master suite with panoramic views of the city and private balcony.",
         image: "/luxury-master-bedroom-penthouse.jpg",
       },
       {
         name: "Terrace",
-        description: "Private outdoor terrace with stunning city views.",
+        description: "Private outdoor terrace with stunning views of the city lights.",
         image: "/penthouse-terrace-with-city-views.jpg",
       },
     ],
     agent: {
-      name: "Michael Chen",
-      phone: "+1 (555) 234-5678",
-      email: "michael@smartrealty.com",
+      name: "Michael Bekele",
+      phone: "+251 91 234 5678",
+      email: "michael@smartrealty.et",
       image: "/professional-headshot.png",
     },
   },
+
   3: {
     id: 3,
-    title: "Charming Victorian Home",
-    price: 2100000,
-    location: "Pacific Heights",
+    title: "Classic Piassa Villa",
+    price: 21000000,
+    location: "Piassa, Addis Ababa",
     beds: 4,
     baths: 3,
     sqft: 3200,
@@ -151,52 +154,54 @@ const propertyData: Record<number, Property> = {
     category: "For Sale",
     featured: true,
     description:
-      "Step back in time with this beautifully restored Victorian featuring original hardwood floors, ornate details, and modern updates.",
-    yearBuilt: 1895,
+      "Step back in time with this beautifully restored villa located in historic Piassa, featuring hardwood floors, vintage architecture, and modern comfort.",
+    yearBuilt: 1975,
     parking: 2,
     rooms: [
       {
         name: "Entry Hall",
-        description: "Grand entry with original crown molding and chandelier.",
+        description: "Grand entry hall with traditional Ethiopian woodwork and chandelier.",
         image: "/victorian-entry-hall-with-chandelier.jpg",
       },
       {
         name: "Parlor",
-        description: "Elegant parlor with fireplace and period details.",
+        description: "Elegant parlor with classic design and cozy fireplace.",
         image: "/victorian-parlor-room.jpg",
       },
       {
         name: "Dining Room",
-        description: "Formal dining room with wainscoting and built-in shelving.",
+        description: "Formal dining room perfect for family gatherings and celebrations.",
         image: "/victorian-dining-room.jpg",
       },
       {
         name: "Kitchen",
-        description: "Renovated kitchen with modern appliances and vintage charm.",
+        description: "Updated kitchen blending modern appliances with classic charm.",
         image: "/placeholder.svg?key=kitchen-victorian&height=500&width=700",
       },
       {
         name: "Master Bedroom",
-        description: "Master bedroom with ornate fireplace and bay windows.",
+        description: "Spacious master bedroom with large windows and serene city views.",
         image: "/placeholder.svg?key=master-victorian&height=500&width=700",
       },
       {
         name: "Library",
-        description: "Cozy library with built-in bookshelves and reading nook.",
+        description: "Quiet library with built-in bookshelves and traditional decor.",
         image: "/placeholder.svg?key=library-victorian&height=500&width=700",
       },
     ],
     agent: {
-      name: "Emma Rodriguez",
-      phone: "+1 (555) 345-6789",
-      email: "emma@smartrealty.com",
+      name: "Eden Meles",
+      phone: "+251 91 345 6789",
+      email: "eden@smartrealty.et",
       image: "/professional-headshot.png",
     },
   },
-}
+};
 
 export default function PropertyDetailPage({ params }: { params: { id: string } }) {
-  const property = propertyData[Number(params.id)]
+  const {id} = useParams()
+  const property = propertyData[Number(id)]
+  console.log(params)
   const [currentRoom, setCurrentRoom] = useState(0)
   const [isSaved, setIsSaved] = useState(false)
   const [direction, setDirection] = useState<"left" | "right">("right")

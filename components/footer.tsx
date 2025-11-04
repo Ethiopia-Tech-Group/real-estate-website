@@ -12,9 +12,11 @@ export function Footer() {
               <div className="w-8 h-8 bg-secondary rounded-lg flex items-center justify-center">
                 <span className="font-bold text-foreground">S</span>
               </div>
-              <span className="font-bold text-lg">Smart Realty</span>
+              <span className="font-bold text-lg">Smart Realty Ethiopia</span>
             </div>
-            <p className="text-background/80">Your modern real estate assistant for finding and managing properties.</p>
+            <p className="text-background/80">
+              Your modern real estate assistant for buying, selling, or renting properties across Ethiopia.
+            </p>
           </div>
 
           {/* Company */}
@@ -77,15 +79,15 @@ export function Footer() {
             <div className="space-y-3 text-background/80">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+251 91 123 4567</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>hello@smartrealty.com</span>
+                <span>hello@smartrealty.et</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4" />
-                <span>San Francisco, CA</span>
+                <span>Bole, Addis Ababa, Ethiopia</span>
               </div>
             </div>
           </div>
@@ -93,10 +95,10 @@ export function Footer() {
 
         <div className="border-t border-background/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-background/80 text-sm">
-            <p>&copy; 2025 Smart Realty Assistant. All rights reserved.</p>
+            <p>&copy; 2025 Smart Realty Ethiopia. All rights reserved.</p>
             <div className="flex items-center space-x-6 mt-4 md:mt-0">
               <Link href="#" className="hover:text-background transition-colors">
-                Twitter
+                Telegram
               </Link>
               <Link href="#" className="hover:text-background transition-colors">
                 LinkedIn

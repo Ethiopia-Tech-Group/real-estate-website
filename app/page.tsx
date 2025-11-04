@@ -9,41 +9,47 @@ export default function Home() {
     {
       icon: Search,
       title: "Smart Property Search",
-      description: "Advanced filtering and AI-powered recommendations to find your perfect property.",
+      description:
+        "Easily find homes and apartments across Ethiopia with advanced filters and AI-powered recommendations.",
     },
     {
       icon: MapPin,
       title: "Interactive Maps",
-      description: "Explore neighborhoods with our interactive map showing amenities and schools.",
+      description:
+        "Explore Addis Ababa and nearby cities using an interactive map showing schools, shops, and transport access.",
     },
     {
       icon: ArrowRight,
       title: "3D Property Tours",
-      description: "Virtual walkthroughs of properties in immersive 3D environments.",
+      description:
+        "Take realistic 3D virtual tours of homes and apartments without leaving your screen.",
     },
     {
       icon: Users,
       title: "Agent Connection",
-      description: "Connect directly with qualified real estate agents in your area.",
+      description:
+        "Chat directly with trusted real estate agents and property developers across Ethiopia.",
     },
     {
       icon: BarChart3,
       title: "Market Analytics",
-      description: "Data-driven insights about property values and market trends.",
+      description:
+        "Access real-time property insights and market trends to make informed decisions.",
     },
     {
       icon: FileText,
       title: "Document Automation",
-      description: "Automatically generate contracts and marketing materials.",
+      description:
+        "Generate rental agreements, sale contracts, and marketing materials automatically.",
     },
-  ]
-
+  ];
+  
   const listings = [
     {
       id: 1,
-      title: "Modern Downtown Loft",
-      price: "$1,250,000",
-      location: "Downtown San Francisco",
+      title: "Modern Bole Loft",
+      price: "Br 12,500,000",
+      location: "Bole, Addis Ababa",
       beds: 2,
       baths: 2,
       sqft: "1,400",
@@ -52,9 +58,9 @@ export default function Home() {
     },
     {
       id: 2,
-      title: "Luxury Bay View Penthouse",
-      price: "$3,500,000",
-      location: "Financial District",
+      title: "Luxury Kazanchis Penthouse",
+      price: "Br 35,000,000",
+      location: "Kazanchis, Addis Ababa",
       beds: 3,
       baths: 3,
       sqft: "2,800",
@@ -63,16 +69,17 @@ export default function Home() {
     },
     {
       id: 3,
-      title: "Charming Victorian Home",
-      price: "$2,100,000",
-      location: "Pacific Heights",
+      title: "Charming Piassa Villa",
+      price: "Br 21,000,000",
+      location: "Piassa, Addis Ababa",
       beds: 4,
       baths: 3,
       sqft: "3,200",
       image: "/charming-victorian-home.jpg",
       featured: true,
     },
-  ]
+  ];
+  
 
   return (
     <>
@@ -120,7 +127,7 @@ export default function Home() {
                     </div>
                     <Link
                       href={`/listings/${listing.id}`}
-                      className="w-full bg-primary text-primary-foreground py-2 rounded-lg hover:bg-primary/90 transition-colors text-center font-medium"
+                      className="w-full bg-primary text-primary-foreground p-2 rounded-lg hover:bg-primary/90 transition-colors text-center font-medium"
                     >
                       View Details
                     </Link>

@@ -8,7 +8,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/60 border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/60 border-b border-border text-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -16,28 +16,28 @@ export function Navbar() {
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">S</span>
             </div>
-            <span className="font-bold text-foreground hidden sm:inline">Smart Realty</span>
+            <span className="font-bold text-gray-200 hidden sm:inline">Smart Realty</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link href="/listings" className="text-foreground hover:text-primary transition-colors">
+          <div className="hidden md:flex items-center space-x-8 text-gray-200">
+            <Link href="/listings" className=" text-gray-200 hover:text-secondary transition-colors">
               Properties
             </Link>
-            <Link href="/tour" className="text-foreground hover:text-primary transition-colors">
+            <Link href="/tour" className="text-gray-200 hover:text-secondary transition-colors">
               3D Tours
             </Link>
-            <Link href="/agents" className="text-foreground hover:text-primary transition-colors">
+            <Link href="/agents" className="text-gray-200 hover:text-secondary transition-colors">
               Agents
             </Link>
-            <Link href="/contact" className="text-foreground hover:text-primary transition-colors">
+            <Link href="/contact" className="text-gray-200 hover:text-secondary transition-colors">
               Contact
             </Link>
           </div>
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link href="/dashboard" className="text-primary hover:text-primary/80 transition-colors font-medium">
+            <Link href="/dashboard" className="text-gray-200 hover:text-gray/80 transition-colors font-medium">
               Dashboard
             </Link>
             <Link

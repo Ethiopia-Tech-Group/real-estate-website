@@ -7,6 +7,8 @@ import {
   useSpring,
   MotionValue,
 } from "motion/react";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export const HeroParallax = ({
   products,
@@ -56,7 +58,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto 
+      className="h-[350vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto 
                  [perspective:1000px] [transform-style:preserve-3d] bg-black text-gray-100"
     >
       <Header />
@@ -110,6 +112,21 @@ export const Header = () => {
         Smart Realty Assistant helps you discover the perfect home with
         AI-powered recommendations, virtual tours, and expert agent support.
       </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-start mt-6">
+              <Link
+                href="/listings"
+                className="cursor-pointer bg-secondary text-secondary-foreground px-8 py-3 rounded-lg hover:bg-secondary/90 transition-colors font-medium inline-flex items-center justify-center gap-2"
+              >
+                Browse Listings
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/tour"
+                className="border border-secondary text-secondary px-8 py-3 rounded-lg hover:bg-secondary/5 transition-colors font-medium"
+              >
+                View 3D Tours
+              </Link>
+            </div>
     </div>
   );
 };
