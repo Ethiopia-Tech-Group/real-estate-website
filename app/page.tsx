@@ -1,8 +1,10 @@
+'use client'
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import Link from "next/link"
 import { Search, MapPin, Users, BarChart3, FileText, ArrowRight } from "lucide-react"
 import { HeroParallaxDemo } from "@/components/Hero"
+import { usePathname } from "next/navigation"
 
 export default function Home() {
   const features = [
@@ -79,11 +81,13 @@ export default function Home() {
       featured: true,
     },
   ];
+const pathname = usePathname()
+  const hideNavbar = pathname.startsWith('/dashboard')
   
 
   return (
     <>
-      <Navbar />
+     {!hideNavbar && <Navbar />}
       <main className="pt-16">
         {/* Hero Section */}
         <HeroParallaxDemo />

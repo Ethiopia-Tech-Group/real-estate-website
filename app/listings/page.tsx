@@ -10,7 +10,7 @@ const allListings = [
   {
     id: 1,
     title: "Modern Bole Loft",
-    price: 125000,
+    price: 1250000,
     location: "Bole, Addis Ababa",
     beds: 2,
     baths: 2,
@@ -22,7 +22,7 @@ const allListings = [
   {
     id: 2,
     title: "Luxury Kazanchis Penthouse",
-    price: 350000,
+    price: 3500000,
     location: "Kazanchis, Addis Ababa",
     beds: 3,
     baths: 3,
@@ -34,7 +34,7 @@ const allListings = [
   {
     id: 3,
     title: "Charming Piassa Villa",
-    price: 210000,
+    price: 2100000,
     location: "Piassa, Addis Ababa",
     beds: 4,
     baths: 3,
@@ -46,7 +46,7 @@ const allListings = [
   {
     id: 4,
     title: "Spacious CMC Apartment",
-    price: 850000,
+    price: 8500000,
     location: "CMC, Addis Ababa",
     beds: 2,
     baths: 2,
@@ -58,7 +58,7 @@ const allListings = [
   {
     id: 5,
     title: "Trendy Sarbet Studio",
-    price: 450000,
+    price: 4500000,
     location: "Sarbet, Addis Ababa",
     beds: 1,
     baths: 1,
@@ -82,7 +82,7 @@ const allListings = [
   {
     id: 7,
     title: "Premium Old Airport Loft",
-    price: 550000,
+    price: 5500000,
     location: "Old Airport, Addis Ababa",
     beds: 3,
     baths: 2,
@@ -94,7 +94,7 @@ const allListings = [
   {
     id: 8,
     title: "Lake View Villa",
-    price: 42000,
+    price: 4200000,
     location: "Bishoftu (Debre Zeyit)",
     beds: 4,
     baths: 3,
