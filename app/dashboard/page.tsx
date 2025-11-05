@@ -105,7 +105,7 @@ export default function DashboardPage() {
     {
       id: 1,
       title: "Modern Downtown Loft",
-      price: "$1,250,000",
+      price: "Br 1,250,000",
       status: "Listed",
       views: 342,
       leads: 12,
@@ -116,7 +116,7 @@ export default function DashboardPage() {
     {
       id: 2,
       title: "Luxury Bay View Penthouse",
-      price: "$3,500,000",
+      price: "Br 3,500,000",
       status: "Pending",
       views: 891,
       leads: 28,
@@ -127,7 +127,7 @@ export default function DashboardPage() {
     {
       id: 3,
       title: "Charming Victorian Home",
-      price: "$2,100,000",
+      price: "Br 2,100,000",
       status: "Listed",
       views: 567,
       leads: 18,
@@ -185,7 +185,7 @@ export default function DashboardPage() {
     {
       id: 1,
       title: "Modern Downtown Loft",
-      price: "$1,250,000",
+      price: "Br 1,250,000",
       image: "/modern-living-room-with-floor-to-ceiling-windows.jpg",
       nearbySchools: ["Lincoln Elementary School", "Central High School", "Tech Academy"],
       restaurants: ["The Urban Kitchen", "Artisan Coffee Co", "Italian Bistro", "Sushi Place"],
@@ -734,7 +734,7 @@ const hideNavbar = pathname.startsWith('/dashboard')
                 />
                 <input
                   type="text"
-                  placeholder="Price (e.g., $1,250,000)"
+                  placeholder="Price (e.g., Br 1,250,000)"
                   value={listingForm.price}
                   onChange={(e) => setListingForm({ ...listingForm, price: e.target.value })}
                   className="w-full px-3 py-2 border border-border rounded-lg text-sm"

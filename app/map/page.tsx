@@ -28,11 +28,11 @@ export default function MapPage() {
   const [searchTerm, setSearchTerm] = useState("")
 
   const properties: Property[] = [
-    { id: 1, title: "Modern Downtown Loft", price: "$1.25M", lat: 37.7749, lng: -122.4194, beds: 2, baths: 2 },
-    { id: 2, title: "Luxury Penthouse", price: "$3.5M", lat: 37.7949, lng: -122.4094, beds: 3, baths: 3 },
-    { id: 3, title: "Victorian Home", price: "$2.1M", lat: 37.7949, lng: -122.4394, beds: 4, baths: 3 },
-    { id: 4, title: "Marina Apartment", price: "$850K", lat: 37.7949, lng: -122.4494, beds: 2, baths: 2 },
-    { id: 5, title: "Tech Hub Studio", price: "$450K", lat: 37.7849, lng: -122.4094, beds: 1, baths: 1 },
+    { id: 1, title: "Modern Downtown Loft", price: "Br 1.25M", lat: 37.7749, lng: -122.4194, beds: 2, baths: 2 },
+    { id: 2, title: "Luxury Penthouse", price: "Br 3.5M", lat: 37.7949, lng: -122.4094, beds: 3, baths: 3 },
+    { id: 3, title: "Victorian Home", price: "Br 2.1M", lat: 37.7949, lng: -122.4394, beds: 4, baths: 3 },
+    { id: 4, title: "Marina Apartment", price: "Br 850K", lat: 37.7949, lng: -122.4494, beds: 2, baths: 2 },
+    { id: 5, title: "Tech Hub Studio", price: "Br 450K", lat: 37.7849, lng: -122.4094, beds: 1, baths: 1 },
   ]
 
   const amenities: Amenity[] = [

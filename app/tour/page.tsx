@@ -34,7 +34,7 @@ const tours: Tour[] = [
     location: "Downtown San Francisco",
     bedrooms: 2,
     bathrooms: 2,
-    price: "$1,250,000",
+    price: "Br 1,250,000",
     description:
       "Experience this stunning modern loft featuring open floor plans, floor-to-ceiling windows, and smart home technology.",
     rooms: [
@@ -83,7 +83,7 @@ const tours: Tour[] = [
     location: "Financial District",
     bedrooms: 3,
     bathrooms: 3,
-    price: "$3,500,000",
+    price: "Br 3,500,000",
     description:
       "Indulge in luxury with this exceptional penthouse offering breathtaking bay views, premium finishes, and an outdoor terrace.",
     rooms: [
@@ -132,7 +132,7 @@ const tours: Tour[] = [
     location: "Pacific Heights",
     bedrooms: 4,
     bathrooms: 3,
-    price: "$2,100,000",
+    price: "Br 2,100,000",
     description:
       "Step back in time with this beautifully restored Victorian featuring original hardwood floors, ornate details, and modern updates.",
     rooms: [
