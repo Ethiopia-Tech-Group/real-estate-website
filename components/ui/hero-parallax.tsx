@@ -115,14 +115,14 @@ export const Header = () => {
       <div className="flex flex-col sm:flex-row gap-4 justify-start mt-6">
               <Link
                 href="/listings"
-                className="cursor-pointer bg-secondary text-secondary-foreground px-8 py-3 rounded-lg hover:bg-secondary/90 transition-colors font-medium inline-flex items-center justify-center gap-2"
+                className="cursor-pointer bg-primary text-secondary-background px-8 py-3 rounded-lg hover:bg-secondary/90 transition-colors font-medium inline-flex items-center justify-center gap-2"
               >
                 Browse Listings
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/tour"
-                className="border border-secondary text-secondary px-8 py-3 rounded-lg hover:bg-secondary/5 transition-colors font-medium"
+                className="border border-primary text-primary px-8 py-3 rounded-lg hover:bg-secondary/5 transition-colors font-medium"
               >
                 View 3D Tours
               </Link>

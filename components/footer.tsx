@@ -97,7 +97,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center text-background/80 text-sm">
             <p>&copy; 2025 <a href="https://etg.et/" className="text-blue-500" target="_blank">Ethiopian Tech Group </a>All rights reserved.</p>
             <div className="flex items-center space-x-6 mt-4 md:mt-0">
-              <Link href="#" className="hover:text-background transition-colors">
+              <Link href="https://t.me/+dXopsEp1BEY0NDU0" target="_blank" className="hover:text-background transition-colors">
                 Telegram
               </Link>
               <Link target="_blank" href="https://www.linkedin.com/company/ethiopia-tech-group/posts/?feedView=all" className="hover:text-background transition-colors">
