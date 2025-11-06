@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-foreground text-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -33,21 +33,13 @@ export function Footer() {
                   Properties
                 </Link>
               </li>
-              <li>
-                <Link href="/about" className="hover:text-background transition-colors">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-background transition-colors">
-                  Blog
-                </Link>
-              </li>
+             
+             
             </ul>
           </div>
 
           {/* Resources */}
-          <div className="space-y-4">
+          {/* <div className="space-y-4">
             <h3 className="font-bold">Resources</h3>
             <ul className="space-y-2 text-background/80">
               <li>
@@ -71,7 +63,7 @@ export function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Contact */}
           <div className="space-y-4">
