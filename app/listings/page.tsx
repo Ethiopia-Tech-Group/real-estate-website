@@ -131,10 +131,10 @@ export default function ListingsPage() {
       <main className="pt-16 bg-background min-h-screen">
         {/* Header */}
         <div className="bg-white border-b border-border">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <h1 className="text-4xl font-bold text-foreground mb-4">Find Your Perfect Property</h1>
-            <p className="text-lg text-muted-foreground">
-              Browse our extensive collection of listings in San Francisco
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <h1 className="text-3xl font-bold text-foreground mb-4">Find Your Perfect Property</h1>
+            <p className="text-md text-muted-foreground">
+              Browse our extensive collection of listings in Ethiopia
             </p>
           </div>
         </div>
