@@ -378,10 +378,10 @@ export default function ContactPage() {
           </div>
 
           {/* Map Section */}
-          <div className="mt-16 bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+          {/* <div className="mt-16 bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-3">
               <div className="lg:col-span-2 h-96 bg-gradient-to-br from-blue-100 to-cyan-100 relative">
-                {/* Mock Map */}
+              
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center text-gray-600">
                     <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
@@ -404,7 +404,7 @@ export default function ContactPage() {
                 </button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </main>
       <Footer />
