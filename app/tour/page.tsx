@@ -201,12 +201,12 @@ export default function TourPage() {
       <main className="pt-16 bg-background min-h-screen">
         {/* Header */}
         <div className="bg-white border-b border-border">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-4">
             <div className="flex items-center gap-2 mb-2">
-              <Grid3x3 className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-              <h1 className="text-3xl sm:text-4xl font-bold text-foreground">Virtual 3D Tours</h1>
+              {/* <Grid3x3 className="w-5 h-5 sm:w-6 sm:h-6 text-primary" /> */}
+              {/* <h1 className="text-3xl sm:text-3xl font-bold text-foreground">Virtual 3D Tours</h1> */}
             </div>
-            <p className="text-base sm:text-lg text-muted-foreground">
+            <p className="text-base sm:text-md text-muted-foreground">
               Explore properties in immersive 3D environments
             </p>
           </div>
