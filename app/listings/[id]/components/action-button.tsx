@@ -1,7 +1,12 @@
 import Link from "next/link"
 import { Calendar, MessageCircle, FileText, Download } from "lucide-react"
+import { Property } from "../types/property"
 
-export function ActionButtons() {
+interface PropertyDetailsProps {
+  property: Property
+}
+
+export function ActionButtons({ property }: PropertyDetailsProps) {
   return (
     <div className="space-y-4">
       {/* Primary Actions */}
@@ -64,6 +69,27 @@ export function ActionButtons() {
           <div className="flex justify-between">
             <span className="text-blue-800">Days on market:</span>
             <span className="font-semibold text-blue-900">12</span>
+          </div>
+        </div>
+      </div>
+        <div className="bg-blue-50 rounded-xl border border-blue-200 p-6">
+        <h4 className="font-bold text-blue-900 mb-3">Property Insights</h4>
+        <div className="space-y-3 text-sm text-blue-800">
+          <div className="flex justify-between items-center">
+            <span>Price per sqft:</span>
+            <span className="font-semibold">${(property.price / property.sqft).toFixed(2)}</span>
+          </div>
+          <div className="flex justify-between items-center">
+            <span>Market Status:</span>
+            <span className="font-semibold text-green-600">Active</span>
+          </div>
+          <div className="flex justify-between items-center">
+            <span>Last Updated:</span>
+            <span className="font-semibold">2 days ago</span>
+          </div>
+          <div className="flex justify-between items-center">
+            <span>Property ID:</span>
+            <span className="font-semibold">SR-{property.id.toString().padStart(4, '0')}</span>
           </div>
         </div>
       </div>

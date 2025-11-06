@@ -93,7 +93,7 @@ export function PropertyDetails({ property }: PropertyDetailsProps) {
       </div>
 
       {/* Property History & Insights */}
-      <div className="bg-blue-50 rounded-xl border border-blue-200 p-6">
+      {/* <div className="bg-blue-50 rounded-xl border border-blue-200 p-6">
         <h4 className="font-bold text-blue-900 mb-3">Property Insights</h4>
         <div className="space-y-3 text-sm text-blue-800">
           <div className="flex justify-between items-center">
@@ -113,7 +113,7 @@ export function PropertyDetails({ property }: PropertyDetailsProps) {
             <span className="font-semibold">SR-{property.id.toString().padStart(4, '0')}</span>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

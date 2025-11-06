@@ -22,7 +22,7 @@ export default function PropertyDetailPage() {
     return (
       <>
         <Navbar />
-        <main className="pt-16 bg-background min-h-screen flex items-center justify-center">
+        <main className="pt-16 bg-white min-h-screen flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-foreground mb-4">Property not found</h1>
             <Link href="/listings" className="text-primary hover:text-primary/80">
@@ -38,7 +38,7 @@ export default function PropertyDetailPage() {
   return (
     <>
       <Navbar />
-      <main className="pt-16 bg-background min-h-screen">
+      <main className="pt-16 bg-white min-h-screen">
         <div className="bg-white border-b border-border">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex items-center gap-2 text-sm">
@@ -61,18 +61,18 @@ export default function PropertyDetailPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
             <div className="lg:col-span-2 space-y-8">
               <RoomExplorer property={property} />
-              <InteractiveMap property={property} />
+              {/* <InteractiveMap property={property} /> */}
               <PropertyDetails property={property} />
             </div>
 
             <div className="lg:col-span-1 space-y-6">
               <AgentCard property={property} />
-              <ActionButtons />
-            </div>
-            <div className="grid-cols-3">
-            {/* <InteractiveMap property={property} /> */}
+              <ActionButtons property={property}  />
             </div>
           </div>
+            <div className="">
+            <InteractiveMap property={property} />
+            </div>
         </div>
       </main>
       <Footer />
